@@ -3,7 +3,7 @@
 // IMPORTANT: this code has to run before any content is printed to the page - otherwise the cookies won't work!
 require('madvertise-snippet.php');
 $madvertise_params = array(
-  'site_id'       => 'TestTokn', //this is a test-site-token - you should replace it with your code from our platform
+  'site_token'       => 'TestTokn', //this is a test-site-token - you should replace it with your code from our platform
   'banner_type'   => 'mma'
 );
 $ad = madvertise_request($madvertise_params);

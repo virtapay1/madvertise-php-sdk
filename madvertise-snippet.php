@@ -1,5 +1,5 @@
 <?php
-  function madvertise_request($madvertise_params) {
+function madvertise_request($madvertise_params = array('site_token' => 'TestTokn')) {
     $protocol = 'http';
     if(!empty($_SERVER['HTTP_X_OPERAMINI_PHONE_UA']))
       $ua = $_SERVER['HTTP_X_OPERAMINI_PHONE_UA'];
@@ -24,7 +24,7 @@
     $post = implode('&', $params);
     $request = curl_init();
     $request_timeout = 1; // 1 second timeout
-    curl_setopt($request, CURLOPT_URL, 'http://ad.madvertise.de/site/' . $madvertise_params['site_id']);
+    curl_setopt($request, CURLOPT_URL, 'http://ad.madvertise.de/site/' . $madvertise_params['site_token']);
     curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($request, CURLOPT_HEADER, 1);
     curl_setopt($request, CURLOPT_TIMEOUT, $request_timeout);
