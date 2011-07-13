@@ -1,5 +1,5 @@
 <?php
-function madvertise_request($madvertise_params = array('site_token' => 'DgVIuDJB')) {
+function madvertise_request($madvertise_params = array('site_token' => 'TestTokn')) {
   $protocol = 'http';
   if(!empty($_SERVER['HTTP_X_OPERAMINI_PHONE_UA']))
     $ua = $_SERVER['HTTP_X_OPERAMINI_PHONE_UA'];
