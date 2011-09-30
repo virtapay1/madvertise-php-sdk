@@ -11,14 +11,14 @@ function madvertise_request($madvertise_params = array('site_token' => 'TestTokn
     $ip =  $_SERVER['REMOTE_ADDR'];
   if (!empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) != 'off') $protocol = 'https';
 
-  $debug = empty($madvervise_params['debug']) ? '0' : $madvervise_params['debug'];
+  $debug = empty($madvertise_params['debug']) ? '0' : $madvertise_params['debug'];
 
   $params = array('ua=' . urlencode($ua),
                   'ip=' . urlencode($ip),
                   'url=' . urlencode("$protocol://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']),
                   'debug=' . urlencode($debug),
                   'uu=' . urlencode($_COOKIE['madvertise']),
-                  'banner_type=' . urlencode($madvervise_params['banner_type'])
+                  'banner_type=' . urlencode($madvertise_params['banner_type'])
                   );
 
   $post = implode('&', $params);
